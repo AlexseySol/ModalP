@@ -1,0 +1,125 @@
+.header__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 900px;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 550px;
+  }
+  @media screen and (max-width: 550px) {
+    max-width: 450px;
+  }
+
+  transform: matrix(0.001, 0, 0, 1, 0, 0);
+  animation: anim 3s forwards;
+}
+
+.block__backgr {
+  display: flex;
+  z-index: 1;
+  position: relative;
+  top: -56px;
+
+  .header__backgr_left {
+    background-image: url(../../../public/img/header.png);
+    height: 100vh;
+    width: 110%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .header__backgr_right {
+    background-image: url(../../../public/img/ll1.png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+  }
+}
+.header__navbar {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 20px;
+  border-bottom: 1px solid #d3d3d3;
+  z-index: 55;
+  display: flex;
+  .navbar__burger {
+    flex: 1 1 auto;
+
+    a {
+      color: #d3d3d3;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      &:hover {
+        text-shadow: 1px 1px 1px #d3d3d3;
+      }
+    }
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.header__socBlock {
+  a {
+    color: #d3d3d3;
+    &:hover {
+      text-shadow: 1px 1px 1px #d3d3d3;
+    }
+  }
+  a:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+.header_title {
+  position: absolute;
+  color: #d3d3d3;
+  top: 60%;
+  left: 50%;
+  z-index: 56;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+  animation: text 2s linear;
+  font-weight: 600;
+
+  @media screen and (max-width: 900px) {
+    font-size: 40px;
+    top: 80%;
+  }
+  @media screen and (max-width: 900px) {
+    font-size: 40px;
+    top: 80%;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 34px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@keyframes anim {
+  to {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}
+
+@keyframes text {
+  from {
+    transform: translate(-50%, 1000%);
+  }
+}
+
+.burger {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}
