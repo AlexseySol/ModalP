@@ -1,55 +1,33 @@
 .header__wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  height: 100vh;
   position: relative;
 
   @media screen and (max-width: 1280px) {
     max-width: 900px;
   }
   @media screen and (max-width: 768px) {
-    max-width: 550px;
+    max-width: 650px;
   }
-  @media screen and (max-width: 550px) {
-    max-width: 450px;
+  @media screen and (max-width: 650px) {
+    max-width: 550px;
   }
 
   transform: matrix(0.001, 0, 0, 1, 0, 0);
   animation: anim 3s forwards;
 }
 
-.block__backgr {
-  display: flex;
-  z-index: 1;
-  position: relative;
-  top: -56px;
-
-  .header__backgr_left {
-    background-image: url(../../../public/img/header.png);
-    height: 100vh;
-    width: 110%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  }
-  .header__backgr_right {
-    background-image: url(../../../public/img/ll1.png);
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100% 120%;
-  }
-}
 .header__navbar {
-  position: relative;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px 20px;
   border-bottom: 1px solid #d3d3d3;
   z-index: 55;
   display: flex;
+  @media screen and (max-width: 900px) {
+    max-width: 768px;
+  }
+
   .navbar__burger {
     flex: 1 1 auto;
 
@@ -79,29 +57,81 @@
     margin-right: 1rem;
   }
 }
-.header_title {
-  position: absolute;
-  color: #d3d3d3;
-  top: 60%;
-  left: 50%;
-  z-index: 56;
-  font-size: 50px;
-  transform: translate(-50%, -50%);
-  animation: text 2s linear;
-  font-weight: 600;
+.block__backgr {
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 0px 0px 0px;
+  align-items: center;
+  padding: 0 10px;
+  @media screen and (max-width: 580px) {
+   flex-direction: column-reverse;
+   margin: 1.5rem 0px 0px 0px;
+  }
+  .img_anim {
+    animation: img 6s ease-in-out forwards;
+    width: 400px;
+   
+    height: 400px;
+    object-fit: contain;
+    @media screen and (max-width: 580px) {
+      width: 90%;
+    height: 100%;
+     }
+  }
+  .img_anim1 {
+    animation: img1 6s ease-in-out forwards;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    @media screen and (max-width: 580px) {
+      width: 90%;
+      height: 100%;
+     }
+  }
+  .img_anim2 {
+    animation: img2 6s ease-in-out forwards;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    @media screen and (max-width: 580px) {
+      width: 90%;
+      height: 100%;
+     }
+  }
 
-  @media screen and (max-width: 900px) {
-    font-size: 40px;
-    top: 80%;
-  }
-  @media screen and (max-width: 900px) {
-    font-size: 40px;
-    top: 80%;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 34px;
-    width: 100%;
-    text-align: center;
+  .block__title {
+    color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    @media screen and (max-width: 580px) {
+      text-align: center;
+         }
+    .title {
+      font-size: 50px;
+   
+    }
+    ul {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      li {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0px 0px 0px;
+        font-size: 16px;
+        &:last-child{
+          grid-column-end: span 2;
+        }
+        span {
+          margin-top: 8px;
+          color: #8f8d8d;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
 
@@ -111,12 +141,42 @@
   }
 }
 
-@keyframes text {
-  from {
-    transform: translate(-50%, 1000%);
+@keyframes img {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
+@keyframes img1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes img2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .burger {
   display: none;
   @media screen and (max-width: 768px) {
