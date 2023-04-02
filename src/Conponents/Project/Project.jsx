@@ -140,7 +140,7 @@ export function Project({
             <img
               className="Project__card_img"
               src="/img/buduar/buduar3.jpg"
-              alt="asd"
+              alt="asdasdasdad"
             />
             <h4>Boudoir</h4>
           </div>
