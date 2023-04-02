@@ -70,10 +70,10 @@ export function Project({
       ) : (
         false
       )}
-         {termo ? (
+      {termo ? (
         <SwipTermo setTermo={setTermo} arrayTermo={arrayTermo} />
       ) : (
-        false 
+        false
       )}
       <div className="Project__wrapper">
         <h2 className="Project__title">Project</h2>
@@ -91,21 +91,22 @@ export function Project({
           </div>
           {/* Card  2*/}
 
- 
-    
           <div
             className="Project__card"
             onClick={() => setSport((prev) => !prev)}
           >
             <img
               className="Project__card_img"
-              src="/img/sports/sport3.jpg" 
+              src="/img/sports/sport3.jpg"
               alt="asd"
             />
             <h4>Gym workout</h4>
           </div>
           {/* Card 5 */}
-          <div className="Project__card"   onClick={() => setSuits((prev) => !prev)}>
+          <div
+            className="Project__card"
+            onClick={() => setSuits((prev) => !prev)}
+          >
             <img
               className="Project__card_img"
               src="/img/suits/suits4.jpg"
@@ -114,24 +115,16 @@ export function Project({
             <h4>For a sportswear store</h4>
           </div>
           {/* Card   6*/}
-          <div className="Project__card" onClick={() => setTermo((prev) => !prev)}>
+          <div
+            className="Project__card"
+            onClick={() => setTermo((prev) => !prev)}
+          >
             <img
               className="Project__card_img"
               src="/img/termo/termo2.jpg"
               alt="asd"
             />
             <h4>For a thermal underwear shop</h4>
-          </div>
-          <div
-            className="Project__card"
-            onClick={() => setSwapSt2((prev) => !prev)}
-          >
-            <img
-              className="Project__card_img"
-              src="/img/2studio/2studio4.jpg"
-              alt="asd"
-            />
-            <h4>Studio B&W Colors</h4>
           </div>
           <div
             className="Project__card"
@@ -143,6 +136,17 @@ export function Project({
               alt="asdasdasdad"
             />
             <h4>Boudoir</h4>
+          </div>
+          <div
+            className="Project__card"
+            onClick={() => setSwapSt2((prev) => !prev)}
+          >
+            <img
+              className="Project__card_img"
+              src="/img/2studio/2studio4.jpg"
+              alt="asd"
+            />
+            <h4>Studio B&W Colors</h4>
           </div>
         </div>
       </div>
