@@ -38,7 +38,7 @@ function SwipBuduar({ setBuduar, arrayBuduar,  }) {
           className="mySwiper"
         >
           {arrayBuduar.map((arr) => {
-            return <SwiperSlide> {arr}</SwiperSlide>;
+            return <SwiperSlide>{arr}</SwiperSlide>;
           })}
 
         </Swiper>

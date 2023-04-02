@@ -65,6 +65,22 @@ function App() {
     <img src="/img/termo/termo6.jpg" alt="dasd" />,
   ];
 
+let arrayOther =[
+  <img src="/img/Other/other1.jpg" alt="dasd" />,
+  <img src="/img/Other/other2.jpg" alt="dasd" />,
+  <img src="/img/Other/other3.jpg" alt="dasd" />,
+  <img src="/img/Other/other4.jpg" alt="dasd" />,
+  <img src="/img/Other/other5.jpg" alt="dasd" />,
+  <img src="/img/Other/other6.jpg" alt="dasd" />,
+  <img src="/img/Other/other7.jpg" alt="dasd" />,
+  <img src="/img/Other/other8.jpg" alt="dasd" />,
+  <img src="/img/Other/other9.jpg" alt="dasd" />,
+  <img src="/img/Other/other10.jpg" alt="dasd" />,
+  <img src="/img/Other/other11.jpg" alt="dasd" />,
+  <img src="/img/Other/other12.jpg" alt="dasd" />,
+  <img src="/img/Other/other13.jpg" alt="dasd" />,
+]
+
   React.useEffect(() => {
     const intervalId = setInterval(() => {
       setCount((prev) => (prev === arrayImg.length - 1 ? 0 : prev + 1));
@@ -82,7 +98,7 @@ function App() {
             path="/"
             element={<Home count={count} arrayImg={arrayImg} />}
           />
-          <Route path="/Other" element={<Other />} />
+          <Route path="/Other" element={<Other arrayOther={arrayOther} />}  />
           <Route
             path="/Project"
             element={

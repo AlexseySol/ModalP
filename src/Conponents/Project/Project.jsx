@@ -75,15 +75,15 @@ export function Project({
       ) : (
         false
       )}
-      <div className="Project__wrapper">
-        <h2 className="Project__title">Project</h2>
-        <div className="Project__cardwrapper">
+      <div className="project__wrapper">
+        <h2 className="project__title">Project</h2>
+        <div className="project__cardwrapper">
           <div
-            className="Project__card"
+            className="project__card"
             onClick={() => setSwap((prev) => !prev)}
           >
             <img
-              className="Project__card_img"
+              className="project__card_img"
               src="/img/1studio/1studio4.jpg"
               alt="asd"
             />
@@ -92,11 +92,11 @@ export function Project({
           {/* Card  2*/}
 
           <div
-            className="Project__card"
+            className="project__card"
             onClick={() => setSport((prev) => !prev)}
           >
             <img
-              className="Project__card_img"
+              className="project__card_img"
               src="/img/sports/sport3.jpg"
               alt="asd"
             />
@@ -104,11 +104,11 @@ export function Project({
           </div>
           {/* Card 5 */}
           <div
-            className="Project__card"
+            className="project__card"
             onClick={() => setSuits((prev) => !prev)}
           >
             <img
-              className="Project__card_img"
+              className="project__card_img"
               src="/img/suits/suits4.jpg"
               alt="asd"
             />
@@ -116,33 +116,33 @@ export function Project({
           </div>
           {/* Card   6*/}
           <div
-            className="Project__card"
+            className="project__card"
             onClick={() => setTermo((prev) => !prev)}
           >
             <img
-              className="Project__card_img"
+              className="project__card_img"
               src="/img/termo/termo2.jpg"
               alt="asd"
             />
             <h4>For a thermal underwear shop</h4>
           </div>
           <div
-            className="Project__card"
+            className="project__card"
             onClick={() => setBuduar((prev) => !prev)}
           >
             <img
-              className="Project__card_img"
+              className="project__card_img"
               src="/img/buduar3.jpg"
               alt="asdasdasdad"
             />
             <h4>Boudoir</h4>
           </div>
           <div
-            className="Project__card"
+            className="project__card"
             onClick={() => setSwapSt2((prev) => !prev)}
           >
             <img
-              className="Project__card_img"
+              className="project__card_img"
               src="/img/2studio/2studio4.jpg"
               alt="asd"
             />
