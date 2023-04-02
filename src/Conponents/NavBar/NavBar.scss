@@ -1,0 +1,124 @@
+@import "../../mixin.scss";
+
+
+.header__navbar {
+  width: 100%;
+  padding: 20px 50px;
+  border-bottom: 1px solid #d3d3d3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#0D0B0B;
+  @media screen and (max-width: 800px) {
+    padding: 20px 30px;
+
+  }
+  @media screen and (max-width: 580px) {
+    position: fixed;
+    z-index: 1;  
+      padding: 20px 34px;
+  }
+
+
+
+  .navbar__burger {
+    display: flex;
+    align-items: center;
+
+    .burger__item {
+      color: $color;
+      font-size: 16px;
+      @media screen and (max-width: 600px) {
+        display: none;
+       
+      }
+      &:hover {
+        text-shadow: 1px 1px 1px #d3d3d3;
+      }
+    }
+    .burger__item:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.header__socBlock {
+  a {
+    font-size: 16px;
+    color: $color;
+    &:hover {
+      text-shadow: 1px 1px 1px #d3d3d3;
+    }
+  }
+  a:not(:last-child) {
+    margin-right: 1rem;
+  }
+  @media screen and (max-width: 600px) {
+    display:none;
+  }
+}
+
+.burger {
+  display: none;
+  @media screen and (max-width: 600px) {
+    display: flex;
+   position: fixed;
+  }
+}
+.burger__wrapper {
+  background-color: black;
+  position: fixed;
+  z-index: 100;
+  top: -100%;
+  overflow: hidden;
+  width: 100%;
+height: calc( 100vh - 75px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.9;
+ padding: 0px 40px;
+  transition: top 1s ease-out;
+  justify-content: space-around;
+}
+
+.open {
+  top: 75px;
+}
+
+.burger__wrapper_item {
+  font-size: 30px;
+  color: $color;
+  z-index: 100;
+  &:first-child {
+    margin: 0px 0px 10px 0px;
+  }
+}
+.header_title{
+  color: $color;
+  font-size: 34px;
+  @media screen and (min-width: 600px) and (max-width: 650px) {
+  display: none;
+  }
+}
+
+
+
+.burger_social{
+  display: flex;
+ justify-content: space-evenly;
+a{
+  font-size: 16px;
+  color: $color;
+
+}
+}
+
+.activ_menu{
+  border-bottom: 1px solid $color;
+  
+}
+
+.activ_menu_burger{
+  color: #ff0000;
+}

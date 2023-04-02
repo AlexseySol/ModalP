@@ -1,8 +1,13 @@
+@import "../../mixin.scss";
+
+
+
 .header__wrapper {
   max-width: 1280px;
-  margin: 0 auto;
+  margin:0rem auto 0px auto;
   position: relative;
-
+  height: 100%;
+  overflow: hidden;
   @media screen and (max-width: 1280px) {
     max-width: 900px;
   }
@@ -11,72 +16,41 @@
   }
   @media screen and (max-width: 650px) {
     max-width: 550px;
+    
   }
 
   transform: matrix(0.001, 0, 0, 1, 0, 0);
-  animation: anim 3s forwards;
+  animation: anim 2s forwards;
 }
 
-.header__navbar {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px 20px;
-  border-bottom: 1px solid #d3d3d3;
-  z-index: 55;
-  display: flex;
-  @media screen and (max-width: 900px) {
-    max-width: 768px;
-  }
-
-  .navbar__burger {
-    flex: 1 1 auto;
-
-    a {
-      color: #d3d3d3;
-      @media screen and (max-width: 768px) {
-        display: none;
-      }
-      &:hover {
-        text-shadow: 1px 1px 1px #d3d3d3;
-      }
-    }
-    a:not(:last-child) {
-      margin-right: 1rem;
-    }
-  }
-}
-
-.header__socBlock {
-  a {
-    color: #d3d3d3;
-    &:hover {
-      text-shadow: 1px 1px 1px #d3d3d3;
-    }
-  }
-  a:not(:last-child) {
-    margin-right: 1rem;
-  }
-}
 .block__backgr {
   display: flex;
   justify-content: space-around;
-  margin: 4rem 0px 0px 0px;
+  margin:  4rem 0px 0px 0px;
   align-items: center;
   padding: 0 10px;
-  @media screen and (max-width: 580px) {
-   flex-direction: column-reverse;
-   margin: 1.5rem 0px 0px 0px;
+  
+  @media screen and (max-width: 900px) {
+    max-width: 768px;
+    margin: 4rem auto 0rem auto;
   }
+  @media screen and (max-width: 580px) {
+    flex-direction: column-reverse;
+    margin: 8rem 0px 0px 0px;
+  }
+
+
   .img_anim {
     animation: img 6s ease-in-out forwards;
     width: 400px;
-   
+
     height: 400px;
     object-fit: contain;
     @media screen and (max-width: 580px) {
       width: 90%;
-    height: 100%;
-     }
+      height: 100%;
+      margin-bottom: 1rem;
+    }
   }
   .img_anim1 {
     animation: img1 6s ease-in-out forwards;
@@ -86,7 +60,8 @@
     @media screen and (max-width: 580px) {
       width: 90%;
       height: 100%;
-     }
+      margin-bottom: 1rem;
+    }
   }
   .img_anim2 {
     animation: img2 6s ease-in-out forwards;
@@ -96,7 +71,8 @@
     @media screen and (max-width: 580px) {
       width: 90%;
       height: 100%;
-     }
+      margin-bottom: 1rem;
+    }
   }
 
   .block__title {
@@ -106,10 +82,9 @@
     padding: 0 10px;
     @media screen and (max-width: 580px) {
       text-align: center;
-         }
+    }
     .title {
       font-size: 50px;
-   
     }
     ul {
       margin-top: 2rem;
@@ -121,7 +96,7 @@
         flex-direction: column;
         margin: 15px 0px 0px 0px;
         font-size: 16px;
-        &:last-child{
+        &:last-child {
           grid-column-end: span 2;
         }
         span {
@@ -175,11 +150,5 @@
   }
   100% {
     opacity: 0;
-  }
-}
-.burger {
-  display: none;
-  @media screen and (max-width: 768px) {
-    display: flex;
   }
 }
