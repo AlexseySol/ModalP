@@ -7,6 +7,8 @@ import { NavLink } from "react-router-dom";
 import { ReactComponent as Close } from "./close.svg";
 import React from "react";
 
+
+
 export const NavBar = () => {
   const [onBurger, setOnBurger] = React.useState(false);
 
@@ -46,6 +48,7 @@ export const NavBar = () => {
         </NavLink>
       </div>
       <h1 className="header_title">Portfolio</h1>
+
       <div className="header__socBlock">
         <a href="https://t.me/Memory_al" target="_blank" rel="noreferrer">
           Telegram

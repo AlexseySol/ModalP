@@ -7,6 +7,7 @@ import { NavBar } from "./Conponents/NavBar/NavBar";
 import Other from "./Conponents/Other/Other";
 import { Project } from "./Conponents/Project/Project";
 
+
 function App() {
   const [count, setCount] = React.useState(0);
   let arrayImg = [
@@ -93,6 +94,7 @@ let arrayOther =[
     <div className="app">
       <Router>
         <NavBar />
+      
         <Routes>
           <Route
             path="/"

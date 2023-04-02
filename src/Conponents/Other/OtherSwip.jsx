@@ -18,14 +18,15 @@ export default function OtherSwip({arrayOther}) {
 
     
       <Swiper
+      
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper"
+        className="swiper1"
       >
 
 {arrayOther.map((arr)=>{
-    return <SwiperSlide>{arr}</SwiperSlide>
+    return <SwiperSlide className="class">{arr}</SwiperSlide>
 })}
 
 {/*         <SwiperSlide>Slide 1</SwiperSlide>
