@@ -32,12 +32,12 @@ function App() {
   
   ];
   let arrayBuduar = [
-    <img src="/img/buduar/buduar1.jpg" alt="dasd" />,
-    <img src="/img/buduar/buduar2.jpg" alt="dasd" />,
-    <img src="/img/buduar/buduar3.jpg" alt="dasd" />,
-    <img src="/img/buduar/buduar4.jpg" alt="dasd" />,
-    <img src="/img/buduar/buduar5.jpg" alt="dasd" />,
-    <img src="/img/buduar/buduar6.jpg" alt="dasd" />,
+    <img src="/img/buduar1.jpg" alt="dasd" />,
+    <img src="/img/buduar2.jpg" alt="dasd" />,
+    <img src="/img/buduar3.jpg" alt="dasd" />,
+    <img src="/img/buduar4.jpg" alt="dasd" />,
+    <img src="/img/buduar5.jpg" alt="dasd" />,
+    <img src="/img/buduar6.jpg" alt="dasd" />,
   ];
 
   let arraySport = [
