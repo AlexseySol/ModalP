@@ -37,8 +37,8 @@ function SwipBuduar({ setBuduar, arrayBuduar,  }) {
           modules={[Keyboard, Pagination, Navigation]}
           className="mySwiper"
         >
-          {arrayBuduar.map((arr) => {
-            return <SwiperSlide>{arr}</SwiperSlide>;
+          {arrayBuduar.map((arr,index) => {
+            return <SwiperSlide key={index}>{arr}</SwiperSlide>;
           })}
 
         </Swiper>

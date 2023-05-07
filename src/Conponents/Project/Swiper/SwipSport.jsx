@@ -37,8 +37,8 @@ function SwipSport({ setSport, arraySport, }) {
           modules={[Keyboard, Pagination, Navigation]}
           className="mySwiper"
         >
-          {arraySport.map((arr) => {
-            return <SwiperSlide> {arr}</SwiperSlide>;
+          {arraySport.map((arr,index) => {
+            return <SwiperSlide key={index} > {arr}</SwiperSlide>;
           })}
 
         </Swiper>

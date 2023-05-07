@@ -37,8 +37,8 @@ function SwipSuits({ arraySuits ,setSuits }) {
           modules={[Keyboard, Pagination, Navigation]}
           className="mySwiper"
         >
-          {arraySuits.map((arr) => {
-            return <SwiperSlide> {arr}</SwiperSlide>;
+          {arraySuits.map((arr,index) => {
+            return <SwiperSlide key={index} > {arr}</SwiperSlide>;
           })}
 
         </Swiper>

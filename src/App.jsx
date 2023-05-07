@@ -7,13 +7,12 @@ import { NavBar } from "./Conponents/NavBar/NavBar";
 import Other from "./Conponents/Other/Other";
 import { Project } from "./Conponents/Project/Project";
 
-
 function App() {
   const [count, setCount] = React.useState(0);
   let arrayImg = [
     <img className="img_anim" src="/img/header1.png" alt="" />,
-    <img className="img_anim1" src="/img/header2.png" alt="" />,
-    <img className="img_anim2" src="/img/header3.png" alt="" />,
+    <img className="img_anim2" src="/img/header5.png" alt="" />,
+    <img className="img_anim1" src="/img/header4.png" alt="" />,
   ];
 
   let arrayStudioFirst = [
@@ -30,7 +29,6 @@ function App() {
     <img src="/img/2studio/2studio3.jpg" alt="dasd" />,
     <img src="/img/2studio/2studio4.jpg" alt="dasd" />,
     <img src="/img/2studio/2studio5.jpg" alt="dasd" />,
-  
   ];
   let arrayBuduar = [
     <img src="/img/buduar1.jpg" alt="dasd" />,
@@ -54,7 +52,6 @@ function App() {
     <img src="/img/suits/suits4.jpg" alt="dasd" />,
     <img src="/img/suits/suits5.jpg" alt="dasd" />,
     <img src="/img/suits/suits6.jpg" alt="dasd" />,
-  
   ];
   let arrayTermo = [
     <img src="/img/termo/termo1.jpg" alt="dasd" />,
@@ -65,21 +62,45 @@ function App() {
     <img src="/img/termo/termo6.jpg" alt="dasd" />,
   ];
 
-let arrayOther =[
-  <img src="/img/Other/other1.jpg" alt="dasd" />,
-  <img src="/img/Other/other2.jpg" alt="dasd" />,
-  <img src="/img/Other/other3.jpg" alt="dasd" />,
-  <img src="/img/Other/other4.jpg" alt="dasd" />,
-  <img src="/img/Other/other5.jpg" alt="dasd" />,
-  <img src="/img/Other/other6.jpg" alt="dasd" />,
-  <img src="/img/Other/other7.jpg" alt="dasd" />,
-  <img src="/img/Other/other8.jpg" alt="dasd" />,
-  <img src="/img/Other/other9.jpg" alt="dasd" />,
-  <img src="/img/Other/other10.jpg" alt="dasd" />,
-  <img src="/img/Other/other11.jpg" alt="dasd" />,
-  <img src="/img/Other/other12.jpg" alt="dasd" />,
-  <img src="/img/Other/other13.jpg" alt="dasd" />,
-]
+  let arrayOther = [
+    <img src="/img/Other/other14.jpg" alt="dasd" />,
+    <img src="/img/Other/other17.jpg" alt="dasd" />,
+    <img src="/img/Other/other15.jpg" alt="dasd" />,
+    <img src="/img/Other/other16.jpg" alt="dasd" />,
+    <img src="/img/Other/other18.jpg" alt="dasd" />,
+    <img src="/img/Other/other1.jpg" alt="dasd" />,
+    <img src="/img/Other/other2.jpg" alt="dasd" />,
+    <img src="/img/Other/other3.jpg" alt="dasd" />,
+    <img src="/img/Other/other4.jpg" alt="dasd" />,
+    <img src="/img/Other/other5.jpg" alt="dasd" />,
+    <img src="/img/Other/other6.jpg" alt="dasd" />,
+    <img src="/img/Other/other7.jpg" alt="dasd" />,
+    <img src="/img/Other/other9.jpg" alt="dasd" />,
+    <img src="/img/Other/other10.jpg" alt="dasd" />,
+    <img src="/img/Other/other12.jpg" alt="dasd" />,
+    <img src="/img/Other/other13.jpg" alt="dasd" />,
+   
+  ];
+
+  let arrayTShirts = [
+    <img src="/img/Футболки/футболка.JPG" alt="dasd" />,
+    <img src="/img/Футболки/футболка2.jpg" alt="dasd" />,
+    <img src="/img/Футболки/футболка3.jpg" alt="dasd" />,
+    <img src="/img/Футболки/футболка4.jpg" alt="dasd" />,
+    <img src="/img/Футболки/футболка5.jpg" alt="dasd" />,
+    <img src="/img/Футболки/футболка6.jpg" alt="dasd" />,
+    <img src="/img/Футболки/футболка7.jpg" alt="dasd" />,
+  ];
+
+  let arraySportSuilNew = [
+    <img src="/img/Костюмы/костюм.jpg" alt="dasd" />,
+    <img src="/img/Костюмы/костюм2.jpg" alt="dasd" />,
+    <img src="/img/Костюмы/костюм3.jpg" alt="dasd" />,
+    <img src="/img/Костюмы/костюм4.jpg" alt="dasd" />,
+    <img src="/img/Костюмы/костюм5.jpg" alt="dasd" />,
+    <img src="/img/Костюмы/костюм6.jpg" alt="dasd" />,
+    <img src="/img/Костюмы/костюм7.jpg" alt="dasd" />,
+  ];
 
   React.useEffect(() => {
     const intervalId = setInterval(() => {
@@ -93,13 +114,13 @@ let arrayOther =[
     <div className="app">
       <Router>
         <NavBar />
-      
+
         <Routes>
           <Route
             path="/"
             element={<Home count={count} arrayImg={arrayImg} />}
           />
-          <Route path="/Other" element={<Other arrayOther={arrayOther} />}  />
+          <Route path="/Other" element={<Other arrayOther={arrayOther} />} />
           <Route
             path="/Project"
             element={
@@ -110,6 +131,8 @@ let arrayOther =[
                 arraySport={arraySport}
                 arraySuits={arraySuits}
                 arrayTermo={arrayTermo}
+                arrayTShirts={arrayTShirts}
+                arraySportSuilNew={arraySportSuilNew}
               />
             }
           />

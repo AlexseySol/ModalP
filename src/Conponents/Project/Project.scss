@@ -32,12 +32,19 @@
 }
 
 .project__card {
+
+
+
   display: flex;
-  margin-top: 1rem;
+  margin: 2rem 0rem;
   flex-direction: column;
   width: 30%;
   align-items: center;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.06);
+
+ }
   @media screen and (max-width: 768px) {
     width: 48%;
     margin: 1.5rem 5px;
@@ -50,6 +57,7 @@
     padding-top: 1rem;
     color: $color;
     text-align: center;
+
   }
 
   img {
@@ -57,10 +65,16 @@
     border-radius: 5px;
     object-fit: cover;
     height: 100%;
+    
     @media screen and (max-width: 650px) {
       width: 100%;
     }
+ 
   }
+  &:hover h4{
+
+    color: rgb(155, 32, 32);
+ }
 }
 .project__title {
   color: $color;

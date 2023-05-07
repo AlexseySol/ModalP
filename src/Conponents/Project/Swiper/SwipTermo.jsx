@@ -37,8 +37,8 @@ function SwipTermo({setTermo, arrayTermo}) {
           modules={[Keyboard, Pagination, Navigation]}
           className="mySwiper"
         >
-          {arrayTermo.map((arr) => {
-            return <SwiperSlide> {arr}</SwiperSlide>;
+          {arrayTermo.map((arr,index) => {
+            return <SwiperSlide key={index} > {arr}</SwiperSlide>;
           })}
 
         </Swiper>

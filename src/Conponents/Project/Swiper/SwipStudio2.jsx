@@ -37,8 +37,8 @@ function SwipStudio2({  arrayStudioTwo , setSwapSt2}) {
           modules={[Keyboard, Pagination, Navigation]}
           className="mySwiper"
         >
-          {arrayStudioTwo.map((arr) => {
-            return <SwiperSlide>{arr}</SwiperSlide>;
+          {arrayStudioTwo.map((arr,index) => {
+            return <SwiperSlide key={index} >{arr}</SwiperSlide>;
           })}
 
         </Swiper>

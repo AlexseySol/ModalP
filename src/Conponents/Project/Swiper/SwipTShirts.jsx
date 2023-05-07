@@ -11,14 +11,13 @@ import { ReactComponent as ExitSwap } from "./close.svg";
 // import required modules
 import { Keyboard, Pagination, Navigation } from "swiper";
 
-function SwipStudio({ setSwap, arrayStudioFirst, arrayStudioTwo }) {
+function SwipTShirts({setTShirts, arrayTShirts}) {
   return (
     <div>
       <div
         className="swap_btn"
         onClick={() => {
-          setSwap((prev)=>!prev)
-      
+          setTShirts((prev)=>!prev)
         }}
       >
         <ExitSwap />
@@ -37,7 +36,7 @@ function SwipStudio({ setSwap, arrayStudioFirst, arrayStudioTwo }) {
           modules={[Keyboard, Pagination, Navigation]}
           className="mySwiper"
         >
-          {arrayStudioFirst.map((arr,index) => {
+          {arrayTShirts.map((arr,index) => {
             return <SwiperSlide key={index} > {arr}</SwiperSlide>;
           })}
 
@@ -47,4 +46,4 @@ function SwipStudio({ setSwap, arrayStudioFirst, arrayStudioTwo }) {
   );
 }
 
-export default  SwipStudio;
+export default  SwipTShirts;

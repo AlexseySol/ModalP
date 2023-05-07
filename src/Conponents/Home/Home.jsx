@@ -6,6 +6,8 @@ import "../../mixin.scss"
 
 export const Home = ({arrayImg,count}) => {
 
+
+
   return (
     <header>
       <div className="header__wrapper">
