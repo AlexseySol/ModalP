@@ -9,6 +9,7 @@ import { Project } from "./Conponents/Project/Project";
 
 function App() {
   const [count, setCount] = React.useState(0);
+
   let arrayImg = [
     <img className="img_anim" src="/img/header1.png" alt="" />,
     <img className="img_anim2" src="/img/header5.png" alt="" />,
@@ -79,7 +80,6 @@ function App() {
     <img src="/img/Other/other10.jpg" alt="dasd" />,
     <img src="/img/Other/other12.jpg" alt="dasd" />,
     <img src="/img/Other/other13.jpg" alt="dasd" />,
-   
   ];
 
   let arrayTShirts = [
@@ -100,6 +100,14 @@ function App() {
     <img src="/img/Костюмы/костюм5.jpg" alt="dasd" />,
     <img src="/img/Костюмы/костюм6.jpg" alt="dasd" />,
     <img src="/img/Костюмы/костюм7.jpg" alt="dasd" />,
+  ];
+  let arrayStreet = [
+    <img src="/img/street/street.JPG" alt="dasd" />,
+    <img src="/img/street/street1.JPG" alt="dasd" />,
+    <img src="/img/street/street2.JPG" alt="dasd" />,
+    <img src="/img/street/street3.JPG" alt="dasd" />,
+    <img src="/img/street/street4.JPG" alt="dasd" />,
+    <img src="/img/street/street5.JPG" alt="dasd" />,
   ];
 
   React.useEffect(() => {
@@ -133,6 +141,7 @@ function App() {
                 arrayTermo={arrayTermo}
                 arrayTShirts={arrayTShirts}
                 arraySportSuilNew={arraySportSuilNew}
+                arrayStreet={arrayStreet}
               />
             }
           />

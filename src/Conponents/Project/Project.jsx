@@ -8,6 +8,7 @@ import SwipSuits from "./Swiper/SwipSuits";
 import SwipTermo from "./Swiper/SwipTermo";
 import SwipNewSuit from "./Swiper/SwipNewSuit";
 import SwipTShirts from "./Swiper/SwipTShirts";
+import SwipStreet from "./Swiper/SwipStreet";
 
 export function Project({
   arrayStudioFirst,
@@ -18,16 +19,19 @@ export function Project({
   arrayTermo,
   arraySportSuilNew,
   arrayTShirts,
+  arrayStreet,
 }) {
   const [visibil, setVisibil] = React.useState(false);
+
   const [swap, setSwap] = React.useState(false);
   const [swapSt2, setSwapSt2] = React.useState(false);
   const [buduar, setBuduar] = React.useState(false);
   const [sport, setSport] = React.useState(false);
   const [suits, setSuits] = React.useState(false);
   const [termo, setTermo] = React.useState(false);
-  const [newSuit, setNewSuit] = React.useState(false); /* костюм */
+  const [newSuit, setNewSuit] = React.useState(false);
   const [tShirts, setTShirts] = React.useState(false);
+  const [street, setStreet] = React.useState(false);
 
   React.useEffect(() => {
     const toggleVisibility = () => {
@@ -80,7 +84,7 @@ export function Project({
       ) : (
         false
       )}
-      {/* new   футболки */}
+
       {tShirts ? (
         <SwipTShirts setTShirts={setTShirts} arrayTShirts={arrayTShirts} />
       ) : (
@@ -95,10 +99,53 @@ export function Project({
       ) : (
         false
       )}
+      {street ? (
+        <SwipStreet setStreet={setStreet} arrayStreet={arrayStreet} />
+      ) : (
+        false
+      )}
 
       <div className="project__wrapper">
         <h2 className="project__title">Project</h2>
         <div className="project__cardwrapper">
+          {/* new  костюмы */}
+          <div
+            className="project__card"
+            onClick={() => setNewSuit((prev) => !prev)}
+          >
+            <img
+              className="project__card_img"
+              src="/img/Костюмы/костюм.jpg"
+              alt="asd"
+            />
+            <h4>Tracksuits</h4>
+          </div>
+          {/* new футболки */}
+          <div
+            className="project__card"
+            onClick={() => setTShirts((prev) => !prev)}
+          >
+            <img
+              className="project__card_img"
+              src="/img/Футболки/футболка.JPG"
+              alt="asd"
+            />
+            <h4>For T-shirt shop</h4>
+          </div>
+
+          {/* STREER */}
+          <div
+            className="project__card"
+            onClick={() => setStreet((prev) => !prev)}
+          >
+            <img
+              className="project__card_img"
+              src="/img/street/street4.JPG"
+              alt="asd"
+            />
+            <h4>Street</h4>
+          </div>
+
           <div
             className="project__card"
             onClick={() => setSwap((prev) => !prev)}
@@ -168,30 +215,6 @@ export function Project({
               alt="asd"
             />
             <h4>Studio B&W Colors</h4>
-          </div>
-          {/* new  костюмы */}
-          <div
-            className="project__card"
-            onClick={() => setNewSuit((prev) => !prev)}
-          >
-            <img
-              className="project__card_img"
-              src="/img/Костюмы/костюм.jpg"
-              alt="asd"
-            />
-            <h4>Tracksuits</h4>
-          </div>
-          {/* new футболки */}
-          <div
-            className="project__card"
-            onClick={() => setTShirts((prev) => !prev)}
-          >
-            <img
-              className="project__card_img"
-              src="/img/Футболки/футболка.JPG"
-              alt="asd"
-            />
-            <h4>For T-shirt shop</h4>
           </div>
         </div>
       </div>
